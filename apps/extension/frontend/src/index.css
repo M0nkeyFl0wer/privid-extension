@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 50% 98%;
+    --foreground: 330 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 330 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 10% 15%;
+
+    /* Pastel pink primary */
+    --primary: 330 100% 87%;
+    --primary-foreground: 330 20% 20%;
+
+    /* Teal accent */
+    --secondary: 175 70% 85%;
+    --secondary-foreground: 175 70% 20%;
+
+    --muted: 330 10% 96%;
+    --muted-foreground: 330 10% 40%;
+
+    /* Yellow accent */
+    --accent: 45 100% 85%;
+    --accent-foreground: 45 80% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 20% 90%;
+    --input: 330 20% 90%;
+    --ring: 330 90% 85%;
+
+    --radius: 1.5rem;
+
+    --sidebar-background: 330 50% 98%;
+    --sidebar-foreground: 330 10% 40%;
+    --sidebar-primary: 330 100% 87%;
+    --sidebar-primary-foreground: 330 20% 20%;
+    --sidebar-accent: 330 30% 95%;
+    --sidebar-accent-foreground: 330 10% 15%;
+    --sidebar-border: 330 20% 90%;
+    --sidebar-ring: 330 90% 85%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Pastel pink primary in true black mode */
+    --primary: 330 90% 80%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Teal accent in true black mode */
+    --secondary: 175 70% 70%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    /* Yellow accent in true black mode */
+    --accent: 45 90% 75%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 330 90% 70%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 330 90% 80%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 330 90% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Extension popup specific styles */
+html, body, #root {
+  width: 380px;
+  min-height: 380px;
+  max-height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
